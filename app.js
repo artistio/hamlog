@@ -10,20 +10,17 @@ router.use(function(req, res, next) {
     next(); // make sure we go to the next routes and don't stop here
 })
 
-router.get('/whoami', function(req, res) {
-    res.json({ callsign: 'yd0spu', 
-	    operator: 'Benny Chandra',
-	    location: {
-		    countryIso: 'IDN',
-		    continent: 'OC',
-		    iota: 'OC021',
-		    cqZone: '28',
-		    ituZone: '54',
-		    ituRegion: '3'
-	    }
-    });
-})
+// Routes for /whoami
+const whoami = require('./routes/whoami');
+router.use('/whoami', whoami);
 
+// Activate the router
 app.use('/api', router)
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// Error handling
+app.use(function (err, req, res, next) {
+  console.error(err.stack)
+  res.status(500).send('Something is broken')
+})
+
+app.listen(port, () => console.log(`Hamlog app listening on port ${port}!`))

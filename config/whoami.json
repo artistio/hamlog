@@ -1,0 +1,12 @@
+{
+  "callsign": "yd0spu",
+  "operator": "Benny Chandra",
+  "location": {
+    "countryIso": "IDN",
+    "continent": "OC",
+    "iota": "OC021",
+    "cqZone": "28",
+    "ituZone": "54",
+    "ituRegion": "3"
+  }
+}
