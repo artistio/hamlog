@@ -9,6 +9,9 @@
   "author": "yd0spu@benny.id",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "body-parse": "^0.1.0",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.2"
   }
 }
